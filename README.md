@@ -1,4 +1,4 @@
-# 🧠 Brain Tumor Detection
+# 🧠 Brain Tumor Detection and Classification
 
 This project deals with the **detection and classification of different types of brain tumors** using MRI images. It employs deep learning models (CNN and VGG16) and uses **Streamlit** to create an interactive web interface for predictions.
 
@@ -91,28 +91,16 @@ An interactive GUI was developed using **Streamlit**:
 
 ### 1. Clone the Repository
 
-git clone <your-repo-url>
+git clone "https://github.com/Karthik-Vishal03/Brain-tumor.git"
 cd brain-tumor-detection
-
-shell
-Copy
-Edit
 
 ### 2. Install Dependencies
 
 pip install -r requirements.txt
 
-shell
-Copy
-Edit
-
 ### 3. Run Streamlit App
 
 streamlit run app.py
-
-yaml
-Copy
-Edit
 
 ---
 
