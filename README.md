@@ -1,20 +1,141 @@
-## Brain-tumor
-This project uses three different models and k fold cross validation
+# 🧠 Brain Tumor Detection
 
-# Dataset collection: - 
-There are around 7031 MRI images obtained from Kaggle and other sources. There are 5716 training images and 1315 testing images. These images are classified into 4 different classes namely – no tumor, glioma tumor, meningioma tumor and pituitary tumor. The images are 256x256 pixel in size. They are in grayscale images to make the data augmentation an easier process.
+This project deals with the **detection and classification of different types of brain tumors** using MRI images. It employs deep learning models (CNN and VGG16) and uses **Streamlit** to create an interactive web interface for predictions.
 
-# Data Preprocessing: - 
-The pre-processing is image augmentation which is done by a keras module named ‘ImageDataGenerator’. This module specializes in image augmentation while you’re still training your model. So, the images are resized and passed into the dataframe so this way the model is robust and saves up overhead memory. Also, there are changes made in the brightness and the contrast of the images. There is a use of train-test split, k cross validation and mini batch training processes used to split the data.
+---
 
-# Model selection and Training: -
-Since the dataset has images, had to go with 2 different Deep learning models – one pre-trained, VGG16 and the other one is Convolutional Neural Network (CNN).
-1.	CNN: - CNN is a network architecture that leans by itself. It is very helpful in learning from the data, analysing the common patterns from the data and make the classification easier, that’s why this is mostly used in deep learning models.
-2.	VGG16: - This is also a CNN, but it is pre-trained so makes building of weights during the training process easier. It consists of 16 layers. This is very much useful for image classification tasks as it can learn complex features.
-Hyperparameter tunning: - This can be done by changing the learning rate of the VGG16 model. By changing the value of the number of folds. By changing the activation functions of the CNN model.
+## 📂 Dataset
 
-# Model Testing & Evaluation: 
-The model is applied to the testing data and evaluated using metrics such as accuracy, F1-score, recall, precision, etc.
+- Total Images: **7031 MRI scans**
+- Training Set: **5716 images**
+- Testing Set: **1315 images**
+- Image Size: **256x256 pixels**
+- Image Type: **Grayscale**
+- Classes:
+  - **No Tumor**
+  - **Glioma Tumor**
+  - **Meningioma Tumor**
+  - **Pituitary Tumor**
 
-# GUI Development: 
-The Web Application is created using Streamlit by python and deploying the best model saved in a h5 (hierarchical data format) file (.h5) which is employed by keras to save models in this format. The test data can be predicted using the Application whether the person has brain tumor or not and which type of tumor it is.
+Dataset sources include **Kaggle** and other medical imaging repositories.
+
+---
+
+## 🧹 Data Preprocessing
+
+- **Image Augmentation** is done using Keras' `ImageDataGenerator`, allowing real-time augmentation during training.
+- Techniques applied:
+  - Resizing
+  - Brightness and contrast adjustment
+  - Real-time augmentation
+- **Train-Test Split**, **Mini-batch training**, and **K-Fold Cross Validation** are used for robust training and evaluation.
+
+---
+
+## 🧠 Model Selection & Training
+
+This project uses two deep learning architectures:
+
+### 1. 🧬 Convolutional Neural Network (CNN)
+- Custom-built architecture from scratch.
+- Learns features and patterns directly from MRI data.
+- Performs classification based on learned features.
+
+### 2. 🧠 VGG16 (Pre-trained)
+- A 16-layer deep Convolutional Neural Network.
+- Pre-trained on ImageNet.
+- Fine-tuned for brain tumor classification.
+- Capable of capturing complex image features.
+
+### 🔧 Hyperparameter Tuning
+- Adjusting learning rate
+- Varying number of folds in K-Fold validation
+- Changing activation functions
+
+---
+
+## 📊 Model Evaluation
+
+The trained models are tested on unseen data using standard performance metrics:
+
+- ✅ Accuracy
+- 🔁 F1-Score
+- 🔍 Precision
+- 📈 Recall
+
+---
+
+## 🖥️ Web Application (GUI)
+
+An interactive GUI was developed using **Streamlit**:
+
+- Accepts MRI image input
+- Loads the best-trained model (saved in `.h5` format)
+- Predicts the tumor type
+- Provides immediate visual feedback to the user
+
+---
+
+## 🛠️ Technologies Used
+
+- 🐍 Python
+- 🧠 TensorFlow / Keras
+- 🖼️ OpenCV
+- 📦 NumPy, Pandas
+- 📊 Scikit-learn
+- 🌐 Streamlit
+
+---
+
+## 🚀 How to Run
+
+### 1. Clone the Repository
+
+git clone <your-repo-url>
+cd brain-tumor-detection
+
+shell
+Copy
+Edit
+
+### 2. Install Dependencies
+
+pip install -r requirements.txt
+
+shell
+Copy
+Edit
+
+### 3. Run Streamlit App
+
+streamlit run app.py
+
+yaml
+Copy
+Edit
+
+---
+
+## 🏁 Results
+
+The project demonstrates strong accuracy in detecting and classifying brain tumors, offering both educational value and real-world potential in medical image analysis.
+
+---
+
+## 🧾 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+## 🙌 Acknowledgements
+
+- Kaggle for dataset access
+- Keras & TensorFlow for model building
+- Streamlit for GUI development
+
+---
+
+## 📬 Contact
+
+For any queries, feel free to reach out or open an issue.
